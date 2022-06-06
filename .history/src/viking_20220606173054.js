@@ -69,26 +69,7 @@ class War {
     }
     return isAlive;
   }
-  saxonAttack() {
-    let randomSaxon =
-      this.saxonArmy[Math.floor(Math.random() * this.saxonArmy.length)];
-    let randomViking =
-      this.vikingArmy[Math.floor(Math.random() * this.vikingArmy.length)];
-    let isAlive = randomViking.receiveDamage(randomSaxon.strength);
-    if (randomViking.health <= 0) {
-      this.vikingArmy.pop(randomViking);
-    }
-    return isAlive;
-  }
-  showStatus() {
-    if (this.saxonArmy.length === 0) {
-      return `Vikings have won the war of the century!`;
-    } else if (this.vikingArmy.length === 0) {
-      return `Saxons have fought for their lives and survived another day...`;
-    } else {
-      return `Vikings and Saxons are still in the thick of battle.`;
-    }
-  }
+  saxonAttack() {}
 }
 
 // The following is required to make unit tests work.
